@@ -19,7 +19,7 @@ public class Enemies : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player")) return;
         _rb = collision.rigidbody;
-        _rb.velocity = Vector2.zero;
+        _rb.linearVelocity = Vector2.zero;
         _rb.AddForce(Vector2.up * _hitJumpForce);
     }
 }

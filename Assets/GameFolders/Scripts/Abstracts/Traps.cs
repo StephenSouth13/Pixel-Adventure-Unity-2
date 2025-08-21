@@ -23,7 +23,7 @@ namespace Abstracts
         {
             if (!collision.CompareTag("Player")) return;
             _rb = collision.attachedRigidbody;
-            _rb.velocity = Vector2.zero;
+            _rb.linearVelocity = Vector2.zero;
             _rb.AddForce(Vector2.up * _hitJumpForce);
         }
 

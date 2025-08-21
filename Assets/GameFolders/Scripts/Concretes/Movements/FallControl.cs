@@ -20,13 +20,13 @@ namespace Movements
         }
         private void Update()
         {
-            if (_rb.velocity.y < 0)
-                _rb.velocity += Vector2.up * Physics2D.gravity.y * _fallMultiplier * Time.deltaTime;
-            else if (_rb.velocity.y > 0.01 && !_input.IsJumpButton)
+            if (_rb.linearVelocity.y < 0)
+                _rb.linearVelocity += Vector2.up * Physics2D.gravity.y * _fallMultiplier * Time.deltaTime;
+            else if (_rb.linearVelocity.y > 0.01 && !_input.IsJumpButton)
             {
-                _rb.velocity += Vector2.up * Physics2D.gravity.y * _lowJumpMulitplier * Time.deltaTime;
+                _rb.linearVelocity += Vector2.up * Physics2D.gravity.y * _lowJumpMulitplier * Time.deltaTime;
             }
-            //buttondown kullanýlýrsa
+            //buttondown kullanï¿½lï¿½rsa
             //if (_groundCheck.IsOnGround)
             //    _rb.velocity = new Vector2(_rb.velocity.x, 0);
         }
